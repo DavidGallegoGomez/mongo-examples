@@ -17,3 +17,16 @@ db.restaurants.updateMany({"cuisine": "American "}, { $set: { "cuisine": "Americ
 db.restaurants.updateOne({"name": "Morris Park Bake Shop"}, { $set: { "address.street": "Calle falsa 123" } })
 db.restaurants.deleteOne({"address.zipcode": "10466"})
 db.restaurants.deleteMany({"address.zipcode": "10466"})
+
+
+
+// Companies:
+mongo 
+show dbs
+use crunch
+show collectionsdb.companies.find()
+> db.companies.find( {"name": "Facebook"}).count()
+> db.companies.find( {"category_code": "web"}).count()
+> db.companies.find( {category_code: "web"}, {name:1, _id:0}).count()
+
+
